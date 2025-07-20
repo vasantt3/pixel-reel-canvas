@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Mail, Instagram, Linkedin, Twitter, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -12,156 +11,132 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-12">
-      <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Get In Touch</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Ready to bring your vision to life? Let's discuss your next project.
-          </p>
-        </div>
-        
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="animate-slide-up">
-            <Card className="p-8 bg-card border-border shadow-card">
-              <h2 className="text-2xl font-semibold mb-6">Send a Message</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                      First Name
-                    </label>
-                    <Input
-                      id="firstName"
-                      type="text"
-                      required
-                      className="bg-surface border-border focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                      Last Name
-                    </label>
-                    <Input
-                      id="lastName"
-                      type="text"
-                      required
-                      className="bg-surface border-border focus:border-primary"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    className="bg-surface border-border focus:border-primary"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="project" className="block text-sm font-medium mb-2">
-                    Project Type
-                  </label>
-                  <Input
-                    id="project"
-                    type="text"
-                    placeholder="Commercial, Music Video, Documentary, etc."
-                    className="bg-surface border-border focus:border-primary"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    rows={6}
-                    required
-                    placeholder="Tell me about your project..."
-                    className="bg-surface border-border focus:border-primary resize-none"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
-                >
-                  Send Message
-                </Button>
-              </form>
-            </Card>
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <div className="pt-20 pb-8 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h1 className="text-3xl font-bold text-foreground">Contact Us</h1>
+            <div className="flex items-center space-x-4">
+              <Button variant="outline" size="sm">
+                CONTACT
+              </Button>
+              <Button variant="ghost" size="sm">
+                MENU
+              </Button>
+            </div>
           </div>
           
-          {/* Contact Info */}
-          <div className="animate-slide-up" style={{ animationDelay: "200ms" }}>
-            <div className="space-y-8">
-              {/* Contact Details */}
-              <Card className="p-6 bg-card border-border shadow-card">
-                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-primary" />
-                    <span>hello@portfolio.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <span>+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-primary" />
-                    <span>Los Angeles, CA</span>
+          {/* Contact Options */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-muted-foreground" />
+                <div>
+                  <h3 className="font-medium">General Inquiries</h3>
+                  <p className="text-muted-foreground">contact@portfolio.co</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <ExternalLink className="w-5 h-5 text-muted-foreground" />
+                <div>
+                  <h3 className="font-medium">Social</h3>
+                  <div className="flex space-x-2 text-sm text-muted-foreground">
+                    <a href="#" className="hover:text-primary">Instagram</a>
+                    <span>•</span>
+                    <a href="#" className="hover:text-primary">LinkedIn</a>
+                    <span>•</span>
+                    <a href="#" className="hover:text-primary">Behance</a>
+                    <span>•</span>
+                    <a href="#" className="hover:text-primary">Twitter</a>
+                    <span>•</span>
+                    <a href="#" className="hover:text-primary">BlueSky</a>
+                    <span>•</span>
+                    <a href="#" className="hover:text-primary">TikTok</a>
+                    <span>•</span>
+                    <a href="#" className="hover:text-primary">Reddit</a>
                   </div>
                 </div>
-              </Card>
-              
-              {/* Social Links */}
-              <Card className="p-6 bg-card border-border shadow-card">
-                <h3 className="text-xl font-semibold mb-4">Follow My Work</h3>
-                <div className="flex space-x-4">
-                  <Button 
-                    variant="outline" 
-                    size="icon"
-                    className="border-border hover:border-primary hover:bg-primary/10"
-                  >
-                    <Instagram className="w-5 h-5" />
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="icon"
-                    className="border-border hover:border-primary hover:bg-primary/10"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="icon"
-                    className="border-border hover:border-primary hover:bg-primary/10"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </Button>
-                </div>
-              </Card>
-              
-              {/* Availability */}
-              <Card className="p-6 bg-card border-border shadow-card">
-                <h3 className="text-xl font-semibold mb-2">Availability</h3>
-                <p className="text-muted-foreground mb-4">
-                  Currently accepting new projects for Q2 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main Content */}
+      <div className="px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-0 min-h-[600px]">
+            {/* Left side - Form */}
+            <div className="bg-gray-100 p-12 flex flex-col justify-center">
+              <div className="max-w-md">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Chat!</h2>
+                <p className="text-gray-600 mb-8">
+                  We'd love to hear from you! Fill out the form below or connect with us through any of our contact options.
                 </p>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium">Available for new work</span>
-                </div>
-              </Card>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        First name
+                      </label>
+                      <Input
+                        placeholder="First name"
+                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Last name
+                      </label>
+                      <Input
+                        placeholder="Last name"
+                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Email
+                    </label>
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Message
+                    </label>
+                    <Textarea
+                      placeholder="Leave a message..."
+                      rows={6}
+                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 resize-none"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit"
+                    className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded"
+                  >
+                    Send Message →
+                  </Button>
+                </form>
+              </div>
+            </div>
+            
+            {/* Right side - Gradient */}
+            <div className="relative bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 flex items-end justify-end p-12">
+              <div className="text-white text-right">
+                <div className="text-sm opacity-80 mb-2">Eindhoven</div>
+                <div className="text-4xl font-light">20:01</div>
+              </div>
             </div>
           </div>
         </div>
