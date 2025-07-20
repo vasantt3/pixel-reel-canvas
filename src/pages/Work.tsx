@@ -64,12 +64,12 @@ const Work = () => {
           </p>
         </div>
         
-        {/* Projects Grid */}
+        {/* Projects Grid - Federico Piccirillo Style */}
         <div className="grid grid-cols-6 gap-4 auto-rows-[200px]">
           {projects.map((project, index) => (
-            <Card 
+            <div 
               key={project.id}
-              className={`group relative overflow-hidden bg-white border-0 hover:shadow-xl transition-smooth cursor-pointer animate-scale-in rounded-xl ${
+              className={`group relative overflow-hidden cursor-pointer animate-scale-in ${
                 index === 0 ? 'col-span-2 row-span-2' :
                 index === 1 ? 'col-span-4 row-span-2' :
                 index === 2 ? 'col-span-2 row-span-1' :
@@ -79,9 +79,9 @@ const Work = () => {
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Video Placeholder */}
-              <div className="relative w-full h-full overflow-hidden rounded-xl">
-                <div className={`w-full h-full group-hover:scale-105 transition-video ${
+              {/* Main Image/Video Area */}
+              <div className="relative w-full h-full overflow-hidden">
+                <div className={`w-full h-full transition-transform duration-500 ease-out group-hover:scale-110 ${
                   index === 0 ? 'bg-gradient-to-br from-orange-400 to-pink-500' :
                   index === 1 ? 'bg-gradient-to-br from-blue-400 to-cyan-500' :
                   index === 2 ? 'bg-gradient-to-br from-purple-400 to-pink-500' :
@@ -91,47 +91,21 @@ const Work = () => {
                 }`}>
                 </div>
                 
-                {/* Content Overlay - Shows on Hover */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6">
-                  {/* Top Info */}
-                  <div className="flex justify-end space-x-2">
-                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-                      {project.duration}
-                    </span>
-                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-                      {project.year}
-                    </span>
-                  </div>
-
-                  {/* Center Play Button */}
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <div className="w-0 h-0 border-l-[12px] border-r-0 border-b-[8px] border-t-[8px] border-l-white border-t-transparent border-b-transparent ml-1"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Bottom Project Info */}
-                  <div>
-                    <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${
-                      index === 0 ? 'text-orange-300' :
-                      index === 1 ? 'text-blue-300' :
-                      index === 2 ? 'text-purple-300' :
-                      index === 3 ? 'text-green-300' :
-                      index === 4 ? 'text-yellow-300' :
-                      'text-pink-300'
-                    }`}>
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold mb-2 text-white">
+                {/* Hover Overlay - Federico Style */}
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-white text-2xl font-bold mb-2 leading-tight">
                       {project.title}
                     </h3>
-                    <p className="text-white/80 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
+                    <div className="flex items-center space-x-4 text-white/80">
+                      <span className="text-sm uppercase tracking-wider font-medium">
+                        {project.category}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
