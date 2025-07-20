@@ -15,12 +15,13 @@ A modern, cinematic video portfolio website showcasing film and video production
 - ✅ Added missing dependencies (react-router-dom, sonner)
 - ✅ Created queryClient setup for TanStack Query
 - ✅ Simplified Home page to single screen with no scrolling sections
+- ✅ Updated Home page to show only auto-playing looped video
 - ✅ Added custom CSS animations and utility classes
 - ✅ Fixed navigation component to use Wouter hooks
 
 ## Current Status
 The portfolio website is fully functional with:
-- Clean, cinematic home page with centered content
+- Minimal home page with auto-playing video background (loops automatically)
 - Working navigation between Home, Work, and Contact pages
 - Responsive design with dark theme
 - Custom animations and styling
