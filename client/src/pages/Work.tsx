@@ -55,7 +55,7 @@ const Work = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-12">
+    <div className="min-h-screen pt-20 pb-12 font-['Roboto',sans-serif]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mb-16 animate-fade-in">

@@ -6,6 +6,10 @@
 /* Cinematic Video Portfolio Design System */
 
 @layer base {
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+  
   :root {
     /* Cinematic color palette */
     --background: 0 0% 8%;
@@ -177,6 +181,21 @@
   
   .animate-scale-in {
     animation: slideUp 0.8s ease-out;
+  }
+
+  /* Contact page specific animations */
+  .contact-header {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .contact-options {
+    animation: slideUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .contact-form {
+    animation: slideUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
   }
   
   @keyframes fadeIn {

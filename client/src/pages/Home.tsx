@@ -14,7 +14,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="font-['Roboto',sans-serif]">
       <div className="relative w-full h-screen overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"

@@ -12,16 +12,16 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-['Roboto',sans-serif]">
       {/* Header */}
       <div className="pt-20 pb-8 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
+          <div className="mb-8 contact-header">
             <h1 className="text-3xl font-bold text-foreground">Contact Us</h1>
           </div>
           
           {/* Contact Options */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8 contact-options">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-muted-foreground" />
@@ -61,19 +61,19 @@ const Contact = () => {
       {/* Main Content */}
       <div className="px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-0 min-h-[600px]">
+          <div className="grid lg:grid-cols-2 gap-0 min-h-[600px] contact-form">
             {/* Left side - Form */}
             <div className="bg-gray-100 p-12 flex flex-col justify-center">
-              <div className="max-w-md">
+              <div className="max-w-md font-['Roboto',sans-serif]">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Chat!</h2>
-                <p className="text-gray-600 mb-8">
+                <p className="text-base text-gray-600 mb-8">
                   We'd love to hear from you! Fill out the form below or connect with us through any of our contact options.
                 </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-sm font-medium text-gray-700 mb-1 font-['Roboto',sans-serif]">
                         First name
                       </label>
                       <Input
@@ -126,7 +126,7 @@ const Contact = () => {
             
             {/* Right side - Gradient */}
             <div className="relative bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 flex items-end justify-end p-12">
-              <div className="text-white text-right">
+              <div className="text-white text-right font-['Roboto',sans-serif]">
                 <div className="text-sm opacity-80 mb-2">Eindhoven</div>
                 <div className="text-4xl font-light">20:01</div>
               </div>

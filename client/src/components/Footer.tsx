@@ -32,7 +32,7 @@ const Footer = () => {
         </button>
       )}
       
-      <footer className="bg-background border-t border-border py-12 px-6">
+      <footer className="bg-background border-t border-border py-12 px-6 font-['Roboto',sans-serif]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 items-start">
             {/* Left side - Let's talk */}
