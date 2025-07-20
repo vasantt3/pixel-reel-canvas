@@ -60,74 +60,76 @@ const Contact = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-0 min-h-[600px] contact-form">
+          <div className="grid lg:grid-cols-2 gap-0 min-h-[700px] contact-form">
             {/* Left side - Form */}
-            <div className="bg-gray-100 p-12 flex flex-col justify-center">
-              <div className="max-w-md font-['Roboto',sans-serif]">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Chat!</h2>
-                <p className="text-base text-gray-600 mb-8">
+            <div className="bg-gray-100 p-8 lg:p-16 flex flex-col justify-center">
+              <div className="max-w-lg w-full font-['Roboto',sans-serif]">
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">Let's Chat!</h2>
+                <p className="text-base lg:text-lg text-gray-600 mb-10 leading-relaxed">
                   We'd love to hear from you! Fill out the form below or connect with us through any of our contact options.
                 </p>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1 font-['Roboto',sans-serif]">
+                      <label className="block text-base font-medium text-gray-700 mb-3 font-['Roboto',sans-serif]">
                         First name
                       </label>
                       <Input
                         placeholder="First name"
-                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 h-12 text-base px-4"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-base font-medium text-gray-700 mb-3">
                         Last name
                       </label>
                       <Input
                         placeholder="Last name"
-                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 h-12 text-base px-4"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-base font-medium text-gray-700 mb-3">
                       Email
                     </label>
                     <Input
                       type="email"
                       placeholder="your@email.com"
-                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 h-12 text-base px-4"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-base font-medium text-gray-700 mb-3">
                       Message
                     </label>
                     <Textarea
                       placeholder="Leave a message..."
                       rows={6}
-                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 resize-none"
+                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 resize-none text-base p-4"
                     />
                   </div>
                   
-                  <Button 
-                    type="submit"
-                    className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded"
-                  >
-                    Send Message →
-                  </Button>
+                  <div className="pt-4">
+                    <Button 
+                      type="submit"
+                      className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-base font-medium"
+                    >
+                      Send Message →
+                    </Button>
+                  </div>
                 </form>
               </div>
             </div>
             
             {/* Right side - Gradient */}
-            <div className="relative bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 flex items-end justify-end p-12">
+            <div className="relative bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 flex items-end justify-end p-8 lg:p-16">
               <div className="text-white text-right font-['Roboto',sans-serif]">
-                <div className="text-sm opacity-80 mb-2">Eindhoven</div>
-                <div className="text-4xl font-light">20:01</div>
+                <div className="text-sm lg:text-base opacity-80 mb-2">Eindhoven</div>
+                <div className="text-3xl lg:text-4xl font-light">20:01</div>
               </div>
             </div>
           </div>
