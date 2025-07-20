@@ -22,7 +22,6 @@ const App = () => (
           <Route path="/" component={Home} />
           <Route path="/work" component={Work} />
           <Route path="/contact" component={Contact} />
-          <Route component={NotFound} />
         </Router>
       </div>
     </TooltipProvider>

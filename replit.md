@@ -9,7 +9,7 @@ A modern, cinematic video portfolio website showcasing film and video production
 - **Styling**: Tailwind CSS with custom cinematic design system
 - **Components**: Shadcn/ui component library
 
-## Recent Changes (July 20, 2025)
+## Recent Changes (July 20-21, 2025)
 - ✅ Migrated routing from React Router DOM to Wouter for Replit compatibility
 - ✅ Fixed CSS import order issues (moved @import to top of file)
 - ✅ Added missing dependencies (react-router-dom, sonner)
@@ -18,14 +18,21 @@ A modern, cinematic video portfolio website showcasing film and video production
 - ✅ Updated Home page to show only auto-playing looped video
 - ✅ Added custom CSS animations and utility classes
 - ✅ Fixed navigation component to use Wouter hooks
+- ✅ Added Footer component with user's email (ivasant3005@gmail.com) and name "vasant"
+- ✅ Changed font family from Inter to Roboto sans-serif throughout site
+- ✅ Added slide-up animations to Work page instead of scale-up
+- ✅ Added mute/unmute toggle for home video (bottom-right corner)
+- ✅ Removed problematic NotFound route causing 404 screens on valid pages
 
 ## Current Status
 The portfolio website is fully functional with:
-- Minimal home page with auto-playing video background (loops automatically)
+- Minimal home page with auto-playing video background (loops automatically) and mute toggle
 - Working navigation between Home, Work, and Contact pages
-- Responsive design with dark theme
-- Custom animations and styling
+- Footer section on all pages with user contact info and social links
+- Responsive design with dark theme using Roboto font
+- Custom slide-up animations and styling
 - Express server running on port 5000
+- Resolved 404 error screens that were appearing incorrectly
 
 ## User Preferences
 - Prefers simple, focused pages without excessive scrolling
