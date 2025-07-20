@@ -70,7 +70,6 @@ const Footer = () => {
               <p>Copyright © 2025 vasant</p>
               <p>All Rights Reserved</p>
               <p>Privacy Policy</p>
-              <p>Termini e condizioni</p>
             </div>
           </div>
         </div>
