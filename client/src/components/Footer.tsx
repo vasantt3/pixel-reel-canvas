@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             {/* Left side - Let's talk */}
             <div>
-              <h3 className="text-lg font-medium mb-2">Let's talk</h3>
+              <h3 className="text-lg font-medium mb-4">Let's talk</h3>
               <a 
                 href="mailto:ivasant3005@gmail.com" 
                 className="text-muted-foreground hover:text-primary transition-colors"
