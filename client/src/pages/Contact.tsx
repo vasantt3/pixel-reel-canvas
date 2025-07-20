@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Instagram, Linkedin, Twitter, ExternalLink } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -133,6 +134,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

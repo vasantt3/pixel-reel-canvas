@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Footer from "@/components/Footer";
 
 const Work = () => {
   // Placeholder project data
@@ -109,6 +110,8 @@ const Work = () => {
           ))}
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
