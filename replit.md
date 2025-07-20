@@ -25,6 +25,7 @@ A modern, cinematic video portfolio website showcasing film and video production
 - ✅ Removed problematic NotFound route causing 404 screens on valid pages
 - ✅ Replaced placeholder video with user's actual portfolio video
 - ✅ Configured video to freeze on last frame instead of looping
+- ✅ Enhanced Contact form with gradient borders matching the design theme
 
 ## Current Status
 The portfolio website is fully functional with:
