@@ -31,10 +31,13 @@ const Home = () => {
           className="w-full h-full object-cover"
           autoPlay
           muted={isMuted}
-          loop
           playsInline
+          onEnded={(e) => {
+            const video = e.target as HTMLVideoElement;
+            video.currentTime = video.duration;
+          }}
         >
-          <source src="/api/placeholder-video.mp4" type="video/mp4" />
+          <source src="/attached_assets/portfoliovideo_1753038645096.mp4" type="video/mp4" />
           <div className="absolute inset-0 bg-gradient-hero" />
         </video>
       </div>

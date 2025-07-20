@@ -23,6 +23,8 @@ A modern, cinematic video portfolio website showcasing film and video production
 - ✅ Added slide-up animations to Work page instead of scale-up
 - ✅ Added mute/unmute toggle for home video (bottom-right corner)
 - ✅ Removed problematic NotFound route causing 404 screens on valid pages
+- ✅ Replaced placeholder video with user's actual portfolio video
+- ✅ Configured video to freeze on last frame instead of looping
 
 ## Current Status
 The portfolio website is fully functional with:
