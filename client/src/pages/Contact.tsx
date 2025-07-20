@@ -13,21 +13,24 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background font-['Roboto',sans-serif]">
-      {/* Header */}
-      <div className="pt-20 pb-8 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8 contact-header">
-            <h1 className="text-3xl font-bold text-foreground">Contact Us</h1>
+      <div className="min-h-screen pt-20 pb-12">
+        <div className="container mx-auto px-6">
+          {/* Header */}
+          <div className="mb-16 contact-header">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Talk</h1>
+            <p className="text-xl text-muted-foreground max-w-2xl">
+              Ready to bring your vision to life? Get in touch to discuss your next project.
+            </p>
           </div>
           
           {/* Contact Options */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8 contact-options">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 contact-options">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-muted-foreground" />
                 <div>
                   <h3 className="font-medium">General Inquiries</h3>
-                  <p className="text-muted-foreground">contact@portfolio.co</p>
+                  <p className="text-muted-foreground">ivasant3005@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -55,12 +58,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Main Content */}
-      <div className="px-6">
-        <div className="max-w-7xl mx-auto">
+
+          {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-0 min-h-[600px] contact-form">
             {/* Left side - Form */}
             <div className="bg-gray-100 p-12 flex flex-col justify-center">
