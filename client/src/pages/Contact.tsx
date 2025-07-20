@@ -15,16 +15,8 @@ const Contact = () => {
       {/* Header */}
       <div className="pt-20 pb-8 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
+          <div className="mb-8">
             <h1 className="text-3xl font-bold text-foreground">Contact Us</h1>
-            <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm">
-                CONTACT
-              </Button>
-              <Button variant="ghost" size="sm">
-                MENU
-              </Button>
-            </div>
           </div>
           
           {/* Contact Options */}

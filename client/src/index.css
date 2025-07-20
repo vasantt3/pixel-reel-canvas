@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -114,8 +114,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Roboto', sans-serif;
   }
   
   /* Video-specific styles */
@@ -124,8 +124,8 @@
   }
   
   /* Add font family utilities */
-  .font-inter {
-    font-family: 'Inter', sans-serif;
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
   }
 }
 
@@ -176,7 +176,7 @@
   }
   
   .animate-scale-in {
-    animation: scaleIn 0.6s ease-out;
+    animation: slideUp 0.8s ease-out;
   }
   
   @keyframes fadeIn {
