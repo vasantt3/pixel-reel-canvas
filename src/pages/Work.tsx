@@ -65,16 +65,23 @@ const Work = () => {
         </div>
         
         {/* Projects Grid */}
-        <div className="portfolio-grid">
+        <div className="grid grid-cols-6 gap-4 auto-rows-[200px]">
           {projects.map((project, index) => (
             <Card 
               key={project.id}
-              className="group relative overflow-hidden bg-white border-0 hover:shadow-xl transition-smooth cursor-pointer animate-scale-in rounded-xl"
+              className={`group relative overflow-hidden bg-white border-0 hover:shadow-xl transition-smooth cursor-pointer animate-scale-in rounded-xl ${
+                index === 0 ? 'col-span-2 row-span-2' :
+                index === 1 ? 'col-span-4 row-span-2' :
+                index === 2 ? 'col-span-2 row-span-1' :
+                index === 3 ? 'col-span-2 row-span-2' :
+                index === 4 ? 'col-span-2 row-span-1' :
+                'col-span-2 row-span-2'
+              }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Video Placeholder */}
-              <div className="aspect-video relative overflow-hidden rounded-t-xl">
-                <div className={`w-full h-full flex items-center justify-center group-hover:scale-105 transition-video ${
+              <div className="relative w-full h-full overflow-hidden rounded-xl">
+                <div className={`w-full h-full group-hover:scale-105 transition-video ${
                   index === 0 ? 'bg-gradient-to-br from-orange-400 to-pink-500' :
                   index === 1 ? 'bg-gradient-to-br from-blue-400 to-cyan-500' :
                   index === 2 ? 'bg-gradient-to-br from-purple-400 to-pink-500' :
@@ -82,45 +89,47 @@ const Work = () => {
                   index === 4 ? 'bg-gradient-to-br from-yellow-400 to-orange-500' :
                   'bg-gradient-to-br from-pink-400 to-red-500'
                 }`}>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white/30 transition-smooth backdrop-blur-sm">
-                      <div className="w-0 h-0 border-l-[12px] border-r-0 border-b-[8px] border-t-[8px] border-l-white border-t-transparent border-b-transparent ml-1"></div>
-                    </div>
-                    <p className="text-white/80 text-sm font-medium">Play Video</p>
-                  </div>
                 </div>
                 
-                {/* Video Info Overlay */}
-                <div className="absolute top-4 right-4 flex space-x-2">
-                  <span className="px-3 py-1 bg-black/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-                    {project.duration}
-                  </span>
-                  <span className="px-3 py-1 bg-black/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-                    {project.year}
-                  </span>
+                {/* Content Overlay - Shows on Hover */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6">
+                  {/* Top Info */}
+                  <div className="flex justify-end space-x-2">
+                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
+                      {project.duration}
+                    </span>
+                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
+                      {project.year}
+                    </span>
+                  </div>
+
+                  {/* Center Play Button */}
+                  <div className="flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <div className="w-0 h-0 border-l-[12px] border-r-0 border-b-[8px] border-t-[8px] border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom Project Info */}
+                  <div>
+                    <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${
+                      index === 0 ? 'text-orange-300' :
+                      index === 1 ? 'text-blue-300' :
+                      index === 2 ? 'text-purple-300' :
+                      index === 3 ? 'text-green-300' :
+                      index === 4 ? 'text-yellow-300' :
+                      'text-pink-300'
+                    }`}>
+                      {project.category}
+                    </span>
+                    <h3 className="text-xl font-bold mb-2 text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-white/80 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Project Info */}
-              <div className="p-6 bg-white">
-                <div className="flex items-center justify-between mb-3">
-                  <span className={`text-xs font-bold uppercase tracking-wider ${
-                    index === 0 ? 'text-orange-500' :
-                    index === 1 ? 'text-blue-500' :
-                    index === 2 ? 'text-purple-500' :
-                    index === 3 ? 'text-green-500' :
-                    index === 4 ? 'text-yellow-600' :
-                    'text-pink-500'
-                  }`}>
-                    {project.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-smooth">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {project.description}
-                </p>
               </div>
             </Card>
           ))}
