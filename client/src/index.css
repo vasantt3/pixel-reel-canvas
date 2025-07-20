@@ -197,6 +197,11 @@
     animation: slideUp 0.8s ease-out 0.4s forwards;
     opacity: 0;
   }
+
+  /* Home page overlay animation */
+  .home-overlay {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
   
   @keyframes fadeIn {
     from {

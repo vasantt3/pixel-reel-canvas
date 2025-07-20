@@ -26,11 +26,13 @@ A modern, cinematic video portfolio website showcasing film and video production
 
 ## Current Status
 The portfolio website is fully functional with:
-- Minimal home page with auto-playing video background (loops automatically) and mute toggle
+- Static home page with full-screen auto-playing video and scroll-triggered overlay
+- "Let's talk" section appears on scroll with blur background and transparency
+- Floating mute button that repositions when overlay appears
 - Working navigation between Home, Work, and Contact pages
-- Footer section on all pages with user contact info and social links
-- Responsive design with dark theme using Roboto font
-- Custom slide-up animations and styling
+- Footer section on Work and Contact pages with user contact info and social links
+- Responsive design with dark theme using Roboto font throughout
+- Custom slide-up animations for Contact page elements
 - Express server running on port 5000
 - Resolved 404 error screens that were appearing incorrectly
 
