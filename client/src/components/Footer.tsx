@@ -65,22 +65,12 @@ const Footer = () => {
               </div>
             </div>
             
-            {/* Right side - Copyright and scroll to top */}
-            <div className="flex flex-col md:items-end">
-              <div className="text-sm text-muted-foreground mb-4">
-                <p>Copyright © 2025 vasant</p>
-                <p>All Rights Reserved</p>
-                <p>Privacy Policy</p>
-                <p>Termini e condizioni</p>
-              </div>
-              
-              {/* Static scroll to top button in footer */}
-              <button
-                onClick={scrollToTop}
-                className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center hover:bg-primary transition-colors self-end"
-              >
-                <ArrowUp className="w-4 h-4 text-background" />
-              </button>
+            {/* Right side - Copyright */}
+            <div className="text-sm text-muted-foreground md:text-right">
+              <p>Copyright © 2025 vasant</p>
+              <p>All Rights Reserved</p>
+              <p>Privacy Policy</p>
+              <p>Termini e condizioni</p>
             </div>
           </div>
         </div>
