@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
             
             {/* Right side - Copyright */}
-            <div className="text-sm text-muted-foreground md:text-right">
+            <div className="text-sm text-muted-foreground md:text-right space-y-1">
               <p>Copyright © 2025 vasant</p>
               <p>All Rights Reserved</p>
               <p>Privacy Policy</p>
