@@ -1,8 +1,14 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 const Navigation = () => {
   const [location] = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-border/20">
