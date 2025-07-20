@@ -22,15 +22,20 @@ const Home = () => {
         </div>
       </div>
       
-      {/* Content Overlay */}
-      <div className="relative z-10 flex items-end justify-center min-h-screen p-6 pb-12">
-        <div className="text-center animate-slide-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-            Creative Director
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl">
-            Crafting compelling visual stories through film, motion, and digital experiences
-          </p>
+      {/* Video Controls Overlay */}
+      <div className="relative z-10 flex items-end justify-start min-h-screen p-6 pb-8">
+        <div className="flex items-center space-x-4 animate-fade-in">
+          <button className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-smooth border border-white/20">
+            <div className="w-0 h-0 border-l-[8px] border-r-0 border-b-[6px] border-t-[6px] border-l-white border-t-transparent border-b-transparent ml-1"></div>
+          </button>
+          <div className="text-white">
+            <div className="flex items-center space-x-2 mb-1">
+              <span className="text-sm font-medium">00:44</span>
+              <div className="w-32 h-1 bg-white/20 rounded-full overflow-hidden">
+                <div className="w-8 h-full bg-white rounded-full"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -69,42 +69,56 @@ const Work = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.id}
-              className="group relative overflow-hidden bg-card border-border hover:border-primary/50 transition-smooth cursor-pointer shadow-card animate-scale-in"
+              className="group relative overflow-hidden bg-white border-0 hover:shadow-xl transition-smooth cursor-pointer animate-scale-in rounded-xl"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Video Placeholder */}
-              <div className="aspect-video bg-surface relative overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-surface to-surface-elevated flex items-center justify-center group-hover:scale-105 transition-video">
+              <div className="aspect-video relative overflow-hidden rounded-t-xl">
+                <div className={`w-full h-full flex items-center justify-center group-hover:scale-105 transition-video ${
+                  index === 0 ? 'bg-gradient-to-br from-orange-400 to-pink-500' :
+                  index === 1 ? 'bg-gradient-to-br from-blue-400 to-cyan-500' :
+                  index === 2 ? 'bg-gradient-to-br from-purple-400 to-pink-500' :
+                  index === 3 ? 'bg-gradient-to-br from-green-400 to-blue-500' :
+                  index === 4 ? 'bg-gradient-to-br from-yellow-400 to-orange-500' :
+                  'bg-gradient-to-br from-pink-400 to-red-500'
+                }`}>
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/30 transition-smooth">
-                      <div className="w-0 h-0 border-l-[12px] border-r-0 border-b-[8px] border-t-[8px] border-l-primary border-t-transparent border-b-transparent ml-1"></div>
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white/30 transition-smooth backdrop-blur-sm">
+                      <div className="w-0 h-0 border-l-[12px] border-r-0 border-b-[8px] border-t-[8px] border-l-white border-t-transparent border-b-transparent ml-1"></div>
                     </div>
-                    <p className="text-muted-foreground text-sm">Video Preview</p>
+                    <p className="text-white/80 text-sm font-medium">Play Video</p>
                   </div>
                 </div>
                 
                 {/* Video Info Overlay */}
                 <div className="absolute top-4 right-4 flex space-x-2">
-                  <span className="px-2 py-1 bg-background/80 backdrop-blur-sm rounded text-xs font-medium">
+                  <span className="px-3 py-1 bg-black/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
                     {project.duration}
                   </span>
-                  <span className="px-2 py-1 bg-background/80 backdrop-blur-sm rounded text-xs font-medium">
+                  <span className="px-3 py-1 bg-black/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
                     {project.year}
                   </span>
                 </div>
               </div>
               
               {/* Project Info */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-medium text-primary uppercase tracking-wide">
+              <div className="p-6 bg-white">
+                <div className="flex items-center justify-between mb-3">
+                  <span className={`text-xs font-bold uppercase tracking-wider ${
+                    index === 0 ? 'text-orange-500' :
+                    index === 1 ? 'text-blue-500' :
+                    index === 2 ? 'text-purple-500' :
+                    index === 3 ? 'text-green-500' :
+                    index === 4 ? 'text-yellow-600' :
+                    'text-pink-500'
+                  }`}>
                     {project.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-smooth">
+                <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-smooth">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-gray-600 leading-relaxed">
                   {project.description}
                 </p>
               </div>
