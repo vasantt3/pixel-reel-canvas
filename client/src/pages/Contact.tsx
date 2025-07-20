@@ -75,31 +75,19 @@ const Contact = () => {
                       <label className="block text-base font-medium text-gray-700 mb-3 font-['Roboto',sans-serif]">
                         First name
                       </label>
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 rounded-md p-[2px]">
-                          <div className="bg-white rounded-md h-full w-full">
-                            <Input
-                              placeholder="First name"
-                              className="bg-transparent border-none text-gray-900 placeholder-gray-500 h-12 text-base px-4 rounded-md"
-                            />
-                          </div>
-                        </div>
-                      </div>
+                      <Input
+                        placeholder="First name"
+                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 h-12 text-base px-4"
+                      />
                     </div>
                     <div>
                       <label className="block text-base font-medium text-gray-700 mb-3">
                         Last name
                       </label>
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 rounded-md p-[2px]">
-                          <div className="bg-white rounded-md h-full w-full">
-                            <Input
-                              placeholder="Last name"
-                              className="bg-transparent border-none text-gray-900 placeholder-gray-500 h-12 text-base px-4 rounded-md"
-                            />
-                          </div>
-                        </div>
-                      </div>
+                      <Input
+                        placeholder="Last name"
+                        className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 h-12 text-base px-4"
+                      />
                     </div>
                   </div>
                   
@@ -107,34 +95,22 @@ const Contact = () => {
                     <label className="block text-base font-medium text-gray-700 mb-3">
                       Email
                     </label>
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 rounded-md p-[2px]">
-                        <div className="bg-white rounded-md h-full w-full">
-                          <Input
-                            type="email"
-                            placeholder="your@email.com"
-                            className="bg-transparent border-none text-gray-900 placeholder-gray-500 h-12 text-base px-4 rounded-md"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 h-12 text-base px-4"
+                    />
                   </div>
                   
                   <div>
                     <label className="block text-base font-medium text-gray-700 mb-3">
                       Message
                     </label>
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-500 rounded-md p-[2px]">
-                        <div className="bg-white rounded-md h-full w-full">
-                          <Textarea
-                            placeholder="Leave a message..."
-                            rows={6}
-                            className="bg-transparent border-none text-gray-900 placeholder-gray-500 resize-none text-base p-4 rounded-md"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <Textarea
+                      placeholder="Leave a message..."
+                      rows={6}
+                      className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 resize-none text-base p-4"
+                    />
                   </div>
                   
                   <div className="pt-4">
