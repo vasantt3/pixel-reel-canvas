@@ -22,9 +22,7 @@ const App = () => (
           <Route path="/" component={Home} />
           <Route path="/work" component={Work} />
           <Route path="/contact" component={Contact} />
-          <Route>
-            <NotFound />
-          </Route>
+          <Route path="/:rest*" component={NotFound} />
         </Router>
       </div>
     </TooltipProvider>
