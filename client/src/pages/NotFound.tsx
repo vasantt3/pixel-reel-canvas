@@ -5,8 +5,9 @@ const NotFound = () => {
   const [location] = useLocation();
 
   useEffect(() => {
-    // Only log 404 for routes that aren't the main pages
-    if (location !== "/" && location !== "/work" && location !== "/contact") {
+    // Only log genuine 404 errors for unknown routes
+    const validRoutes = ["/", "/work", "/contact"];
+    if (!validRoutes.includes(location)) {
       console.error(
         "404 Error: User attempted to access non-existent route:",
         location
