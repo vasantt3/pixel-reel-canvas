@@ -45,14 +45,6 @@ const Contact = () => {
                     <a href="#" className="hover:text-primary">LinkedIn</a>
                     <span>•</span>
                     <a href="#" className="hover:text-primary">Behance</a>
-                    <span>•</span>
-                    <a href="#" className="hover:text-primary">Twitter</a>
-                    <span>•</span>
-                    <a href="#" className="hover:text-primary">BlueSky</a>
-                    <span>•</span>
-                    <a href="#" className="hover:text-primary">TikTok</a>
-                    <span>•</span>
-                    <a href="#" className="hover:text-primary">Reddit</a>
                   </div>
                 </div>
               </div>

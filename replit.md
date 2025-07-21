@@ -25,6 +25,10 @@ A modern, cinematic video portfolio website showcasing film and video production
 - ✅ Removed problematic NotFound route causing 404 screens on valid pages
 - ✅ Replaced placeholder video with user's actual portfolio video
 - ✅ Configured video to freeze on last frame instead of looping
+- ✅ Fixed mobile video aspect ratio issues to prevent stretching
+- ✅ Removed "Selected Work" title from Work page for cleaner design
+- ✅ Updated Contact page social links to show only Instagram, LinkedIn, and Behance
+- ✅ Replaced footer social icons with authentic branded LinkedIn and Instagram icons
 
 ## Current Status
 The portfolio website is fully functional with:

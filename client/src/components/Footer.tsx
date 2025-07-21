@@ -1,4 +1,5 @@
 import { ArrowUp } from "lucide-react";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const Footer = () => {
@@ -51,16 +52,10 @@ const Footer = () => {
               <h3 className="text-lg font-medium mb-4">Follow me</h3>
               <div className="flex space-x-3">
                 <a href="#" className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <span className="text-background text-sm font-bold">in</span>
+                  <FaLinkedin className="text-background text-sm" />
                 </a>
                 <a href="#" className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <span className="text-background text-sm font-bold">@</span>
-                </a>
-                <a href="#" className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <span className="text-background text-sm font-bold">ig</span>
-                </a>
-                <a href="#" className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <span className="text-background text-sm font-bold">v</span>
+                  <FaInstagram className="text-background text-sm" />
                 </a>
               </div>
             </div>
