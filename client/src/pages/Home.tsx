@@ -26,12 +26,13 @@ const Home = () => {
   return (
     <div className="font-['Roboto',sans-serif] relative h-screen overflow-hidden">
       {/* Full screen video */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
           className="w-full h-full object-cover"
           autoPlay
           muted={isMuted}
           playsInline
+          style={{ minWidth: '100%', minHeight: '100%' }}
           onEnded={(e) => {
             const video = e.target as HTMLVideoElement;
             video.currentTime = video.duration;
