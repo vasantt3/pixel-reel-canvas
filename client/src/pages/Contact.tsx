@@ -17,10 +17,15 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           {/* Header */}
           <div className="mb-16 contact-header">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Talk</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Ready to bring your vision to life? Get in touch to discuss your next project.
-            </p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
+              <span className="text-foreground">Love motion, design, and</span>
+              <br />
+              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">creative experiments?</span>
+              <br />
+              <span className="text-muted-foreground text-2xl md:text-3xl lg:text-4xl font-medium mt-2 block">
+                Let's discuss something meaningful.
+              </span>
+            </h1>
           </div>
           
           {/* Contact Options */}
