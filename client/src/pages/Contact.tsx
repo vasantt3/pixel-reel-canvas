@@ -16,16 +16,22 @@ const Contact = () => {
       <div className="min-h-screen pt-20 pb-12">
         <div className="container mx-auto px-6">
           {/* Header */}
-          <div className="mb-16 contact-header">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
-              <span className="text-foreground">Love motion, design, and</span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">creative experiments?</span>
-              <br />
-              <span className="text-muted-foreground text-2xl md:text-3xl lg:text-4xl font-medium mt-2 block">
-                Let's discuss something meaningful.
-              </span>
+          <div className="mb-20 contact-header">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-relaxed max-w-5xl">
+              <span className="text-foreground">Love </span>
+              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">Motion</span>
+              <span className="text-foreground">, </span>
+              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">Design</span>
+              <span className="text-foreground">, and</span>
+              <br className="mb-4" />
+              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">Creative experiments</span>
+              <span className="text-foreground">?</span>
             </h1>
+            <div className="mt-8">
+              <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium leading-relaxed">
+                Let's discuss something meaningful.
+              </p>
+            </div>
           </div>
           
           {/* Contact Options */}
